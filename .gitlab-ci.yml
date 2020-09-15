@@ -4,7 +4,7 @@ stages:
   - deploy
 
 variables:
-  CONTAINER_IMAGE: registry.surfedu.nl/edu/ooapi-mock:$CI_COMMIT_TAG
+  CONTAINER_IMAGE: registry.surfedu.nl/edu/ooapi-mock:$CI_COMMIT_SHA
   CONTAINER_IMAGE_LATEST: registry.surfedu.nl/edu/ooapi-mock:latest
 
 build docker image:
