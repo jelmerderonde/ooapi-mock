@@ -1,0 +1,33 @@
+---
+stages:
+  - build
+  - deploy
+
+variables:
+  CONTAINER_IMAGE: registry.surfedu.nl/edu/ooapi-mock:$CI_COMMIT_TAG
+  CONTAINER_IMAGE_LATEST: registry.surfedu.nl/edu/ooapi-mock:latest
+
+build docker image:
+  stage: build
+  image: docker:stable
+  script:
+    - docker login --username $CI_REGISTRY_USER --password $CI_REGISTRY_PASS registry.surfedu.nl
+    - docker build --pull -t $CONTAINER_IMAGE .
+    - docker push $CONTAINER_IMAGE
+    - docker tag $CONTAINER_IMAGE $CONTAINER_IMAGE_LATEST
+    - docker push $CONTAINER_IMAGE_LATEST
+  tags:
+    - docker
+  only:
+    - master@edu/owl/ooapi-mock
+
+deploy docker image to prod:
+  stage: deploy
+  script:
+    - scp docker-compose.yml deploy@dev01.swarm.surfedu.nl:~/ooapi-mock-stack.yml
+    - ssh deploy@dev01.swarm.surfedu.nl "sudo docker stack deploy --prune -c ~/ooapi-mock-stack.yml ooapi-mock"
+    - ssh deploy@dev01.swarm.surfedu.nl  "sudo docker service update --with-registry-auth --image $CONTAINER_IMAGE ooapi-mock_server"
+  tags:
+    - shell
+  only:
+    - master@edu/owl/ooapi-mock

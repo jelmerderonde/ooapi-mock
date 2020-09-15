@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+
+  server:
+    image: registry.surfedu.nl/edu/ooapi-mock:latest
+    networks:
+      - swarm_web
+    deploy:
+      labels:
+        traefik.enable: "true"
+        traefik.docker.network: swarm_web
+        traefik.frontend.rule: "Host:mock.owl.surf.nl"
+        traefik.port: 8080
+      restart_policy:
+        condition: on-failure
+        delay: 60s
+        max_attempts: 0
+        window: 0s
+
+networks:
+  swarm_web:
+    external: true
