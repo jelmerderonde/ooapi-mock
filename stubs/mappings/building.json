@@ -1,0 +1,10 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/buildings/fee3295a-6e55-45b0-a091-7b4de7e39de7"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "building.json"
+  }
+}

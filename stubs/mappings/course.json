@@ -1,0 +1,10 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/courses/a6aaec24-4fe5-49f2-8b74-509d2f931acc"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "organizations.json"
+  }
+}

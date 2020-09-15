@@ -1,0 +1,25 @@
+{
+  "pageSize": 0,
+  "pageNumber": 0,
+  "items": [{
+    "courseId": "a6aaec24-4fe5-49f2-8b74-509d2f931acc",
+    "name": "string",
+    "abbreviation": "string",
+    "ects": 0,
+    "description": "string",
+    "learningOutcomes": [
+      "string"
+    ],
+    "requirements": "string",
+    "level": "mbo 3",
+    "modeOfDelivery": [
+      "distance-learning"
+    ],
+    "enrollment": "string",
+    "resources": [
+      "string"
+    ],
+    "assessment": "string",
+    "link": "http://example.com"
+  }]
+}

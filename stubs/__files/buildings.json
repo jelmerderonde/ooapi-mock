@@ -1,0 +1,23 @@
+{
+  "pageSize": 0,
+  "pageNumber": 0,
+  "items": [{
+    "buildingId": "fee3295a-6e55-45b0-a091-7b4de7e39de7",
+    "abbreviation": "string",
+    "name": "string",
+    "description": "string",
+    "address": {
+      "type": "postal",
+      "street": "Moreelsepark",
+      "streetNumber": 48,
+      "additional": "On the other side of the road",
+      "postalCode": "3511 EP",
+      "city": "Utrecht",
+      "countryCode": "NL",
+      "geolocation": {
+        "latitude": 0,
+        "longitude": 0
+      }
+    }
+  }]
+}
