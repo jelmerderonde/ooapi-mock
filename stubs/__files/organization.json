@@ -7,7 +7,7 @@
   "addresses": [{
     "type": "postal",
     "street": "Moreelsepark",
-    "streetNumber": 48,
+    "streetNumber": "48",
     "additional": "On the other side of the road",
     "postalCode": "3511 EP",
     "city": "Utrecht",
@@ -29,7 +29,7 @@
     "addresses": [{
       "type": "postal",
       "street": "Moreelsepark",
-      "streetNumber": 48,
+      "streetNumber": "48",
       "additional": "On the other side of the road",
       "postalCode": "3511 EP",
       "city": "Utrecht",
@@ -56,7 +56,7 @@
 
       "type": "postal",
       "street": "Moreelsepark",
-      "streetNumber": 48,
+      "streetNumber": "48",
       "additional": "On the other side of the road",
       "postalCode": "3511 EP",
       "city": "Utrecht",
